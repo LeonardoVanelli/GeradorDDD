@@ -34,8 +34,7 @@ namespace Gerador
         {
             InitializeComponent();
             ValueCampoEdidanto = -1;
-            cbGeral.SetItemChecked(1, true);
-            new AdicionaBotaoEmMenu().Superior("Teste");
+            cbGeral.SetItemChecked(1, true);            
         }
 
 
