@@ -45,14 +45,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarregarDados\Atributos.cs" />
+    <Compile Include="CarregarDados\AtributosEmEntidade.cs" />
+    <Compile Include="CarregarDados\BaseTabela.cs" />
+    <Compile Include="CarregarDados\EntidadeEmViewModel.cs" />
+    <Compile Include="CarregarDados\EntidadesEmAtributos.cs" />
+    <Compile Include="Enun\Enumeration.cs" />
+    <Compile Include="Enun\TipoDataType.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeradorEntidade\Campo.cs" />
+    <Compile Include="GeradorEntidade\Tabela.cs" />
+    <Compile Include="Geradores\AdicionaAutoMapper.cs" />
+    <Compile Include="Geradores\AdicionaNinject.cs" />
+    <Compile Include="Geradores\EntiConfiguration.cs" />
+    <Compile Include="Geradores\EntiController.cs" />
+    <Compile Include="Geradores\GeradorBase.cs" />
+    <Compile Include="Geradores\IEntiAppService.cs" />
+    <Compile Include="Geradores\IEntiRepository.cs" />
+    <Compile Include="Geradores\IEntiService.cs" />
+    <Compile Include="Geradores\EntiRepository.cs" />
+    <Compile Include="Geradores\EntiAppService.cs" />
+    <Compile Include="Geradores\EntiService.cs" />
+    <Compile Include="Geradores\ViewModel.cs" />
+    <Compile Include="Dados\PrismaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrismaDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uteis\AdicionaBotaoEmMenu.cs" />
+    <Compile Include="Uteis\UteisBase.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +93,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Dados\PrismaDBDataSet.xsc">
+      <DependentUpon>PrismaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dados\PrismaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrismaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dados\PrismaDBDataSet.xss">
+      <DependentUpon>PrismaDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
