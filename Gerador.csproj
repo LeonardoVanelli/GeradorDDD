@@ -59,6 +59,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GeradorEntidade\Campo.cs" />
+    <Compile Include="GeradorEntidade\ForeignKey.cs" />
     <Compile Include="GeradorEntidade\Tabela.cs" />
     <Compile Include="Geradores\AdicionaAutoMapper.cs" />
     <Compile Include="Geradores\AdicionaNinject.cs" />

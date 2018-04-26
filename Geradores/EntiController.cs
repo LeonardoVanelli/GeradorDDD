@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerador.GeradorEntidade;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,12 @@ namespace Gerador.Geradores
 {
     class EntiController : GeradorBase
     {
-        public void Gerar(string entidade)
+        IList<string> classe = new List<String>();
+
+        public void Gerar(string entidade, IList<ForeignKey> TabelasForeignKeys)
         {
             var EMinusculo = entidade.ToLower();
-            var EMaiusculo = entidade;
-
-            IList<string> classe = new List<String>();
+            var EMaiusculo = entidade;            
 
             classe.Add("using System.Collections.Generic;");
             classe.Add("using System.Web.Mvc;");
@@ -34,6 +35,7 @@ namespace Gerador.Geradores
             classe.Add("        }");
             classe.Add("");
             classe.Add("        // GET: " + EMaiusculo + "s");
+            AddServiceFK(TabelasForeignKeys);
             classe.Add("        public ActionResult Index()");
             classe.Add("        {");
             classe.Add("            var " + EMinusculo + "ViewModel = Mapper.Map<IEnumerable<" + EMaiusculo + ">, IEnumerable<" + EMaiusculo + "ViewModel>>(_" + EMinusculo + "App.GetAll());");
@@ -51,6 +53,7 @@ namespace Gerador.Geradores
             classe.Add("        // GET: " + EMaiusculo + "s/Create");
             classe.Add("        public ActionResult Create()");
             classe.Add("        {");
+            AdicionaForeignKeys(TabelasForeignKeys);
             classe.Add("            return View();");
             classe.Add("        }");
             classe.Add("");
@@ -121,5 +124,31 @@ namespace Gerador.Geradores
             var gerado = GerarArquivo(classe);
             SalvarArquivo(gerado, EMaiusculo + "sController", @"PrismaWEB.MVC\Controllers");
         }
+
+        private void AddServiceFK(IList<ForeignKey> tabelasForeignKeys)
+        {
+            foreach (var tabela in tabelasForeignKeys)
+            {
+                var tabelaMinusculo = tabela.Tabela.ToLower();
+                var tabelaMaiusculo = tabela.Tabela;
+
+                classe.Add($"        private readonly I{tabelaMaiusculo}AppService _{tabelaMinusculo}App;");
+            }
+            if (tabelasForeignKeys.Count > 0)
+                classe.Add("");
+        }
+
+        private void AdicionaForeignKeys(IList<ForeignKey> TabelasForeignKeys)
+        {
+            foreach (var tabela in TabelasForeignKeys)
+            {
+                var tabelaMinusculo = tabela.Tabela.ToLower();
+                var tabelaMaiusculo = tabela.Tabela;
+                var campoView = tabela.CampoView;
+
+                classe.Add($"            ViewBag.{tabelaMaiusculo}Id = new SelectList(_{tabelaMinusculo}App.GetAll(), \"Id\", \"{campoView}\");");
+            }
+        }
     }
+
 }

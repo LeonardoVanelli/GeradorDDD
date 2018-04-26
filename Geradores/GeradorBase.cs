@@ -21,10 +21,10 @@ namespace Gerador.Geradores
 
         protected void SalvarArquivo(string textoFinal, string nome, string caminho)
         {
-            StreamWriter salvar;
-            salvar = new StreamWriter($@"C:\Prisma\WEB\{caminho}\{nome}.cs");
-            salvar.WriteLine(textoFinal);
-            salvar.Close();
+            //StreamWriter salvar;
+            //salvar = new StreamWriter($@"C:\Prisma\WEB\{caminho}\{nome}.cs");
+            //salvar.WriteLine(textoFinal);
+            //salvar.Close();
         }
     }
 }

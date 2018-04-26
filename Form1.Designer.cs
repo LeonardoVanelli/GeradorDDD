@@ -69,8 +69,29 @@
             this.cbGeral = new System.Windows.Forms.CheckedListBox();
             this.cbGerarEntidade = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cbMenuSuperior = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.text = new System.Windows.Forms.Label();
+            this.tbFkTabela01 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbFkTabela02 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbFkTabela04 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbFkTabela03 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbFkTabela05 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbFkCampo01 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbFkCampo05 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbFkCampo04 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbFkCampo03 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbFkCampo02 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpInteger.SuspendLayout();
@@ -78,6 +99,7 @@
             this.tpDateTime.SuspendLayout();
             this.tpBool.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnGerar
@@ -185,6 +207,7 @@
             this.tabControl1.Controls.Add(this.tpString);
             this.tabControl1.Controls.Add(this.tpDateTime);
             this.tabControl1.Controls.Add(this.tpBool);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(220, 130);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -462,6 +485,195 @@
             this.cbMenuSuperior.Text = "Superior";
             this.cbMenuSuperior.UseVisualStyleBackColor = true;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.tbFkCampo05);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.tbFkCampo04);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.tbFkCampo03);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.tbFkCampo02);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.tbFkCampo01);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.tbFkTabela05);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.tbFkTabela04);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.tbFkTabela03);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.tbFkTabela02);
+            this.tabPage1.Controls.Add(this.text);
+            this.tabPage1.Controls.Add(this.tbFkTabela01);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(359, 263);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "Tabela (Temporario)";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // text
+            // 
+            this.text.AutoSize = true;
+            this.text.Location = new System.Drawing.Point(11, 18);
+            this.text.Name = "text";
+            this.text.Size = new System.Drawing.Size(71, 13);
+            this.text.TabIndex = 9;
+            this.text.Text = "Nome Tabela";
+            // 
+            // tbFkTabela01
+            // 
+            this.tbFkTabela01.Location = new System.Drawing.Point(14, 34);
+            this.tbFkTabela01.Name = "tbFkTabela01";
+            this.tbFkTabela01.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela01.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 59);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Nome Tabela";
+            // 
+            // tbFkTabela02
+            // 
+            this.tbFkTabela02.Location = new System.Drawing.Point(14, 75);
+            this.tbFkTabela02.Name = "tbFkTabela02";
+            this.tbFkTabela02.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela02.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 143);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Nome Tabela";
+            // 
+            // tbFkTabela04
+            // 
+            this.tbFkTabela04.Location = new System.Drawing.Point(14, 159);
+            this.tbFkTabela04.Name = "tbFkTabela04";
+            this.tbFkTabela04.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela04.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 102);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Nome Tabela";
+            // 
+            // tbFkTabela03
+            // 
+            this.tbFkTabela03.Location = new System.Drawing.Point(14, 118);
+            this.tbFkTabela03.Name = "tbFkTabela03";
+            this.tbFkTabela03.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela03.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 187);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Nome Tabela";
+            // 
+            // tbFkTabela05
+            // 
+            this.tbFkTabela05.Location = new System.Drawing.Point(14, 203);
+            this.tbFkTabela05.Name = "tbFkTabela05";
+            this.tbFkTabela05.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela05.TabIndex = 16;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(176, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 13);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Nome Campo view";
+            // 
+            // tbFkCampo01
+            // 
+            this.tbFkCampo01.Location = new System.Drawing.Point(179, 34);
+            this.tbFkCampo01.Name = "tbFkCampo01";
+            this.tbFkCampo01.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo01.TabIndex = 18;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(176, 187);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(96, 13);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Nome Campo view";
+            // 
+            // tbFkCampo05
+            // 
+            this.tbFkCampo05.Location = new System.Drawing.Point(179, 203);
+            this.tbFkCampo05.Name = "tbFkCampo05";
+            this.tbFkCampo05.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo05.TabIndex = 26;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(176, 143);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 13);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Nome Campo view";
+            // 
+            // tbFkCampo04
+            // 
+            this.tbFkCampo04.Location = new System.Drawing.Point(179, 159);
+            this.tbFkCampo04.Name = "tbFkCampo04";
+            this.tbFkCampo04.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo04.TabIndex = 24;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(176, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(96, 13);
+            this.label17.TabIndex = 23;
+            this.label17.Text = "Nome Campo view";
+            // 
+            // tbFkCampo03
+            // 
+            this.tbFkCampo03.Location = new System.Drawing.Point(179, 118);
+            this.tbFkCampo03.Name = "tbFkCampo03";
+            this.tbFkCampo03.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo03.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(176, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(96, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Nome Campo view";
+            // 
+            // tbFkCampo02
+            // 
+            this.tbFkCampo02.Location = new System.Drawing.Point(179, 75);
+            this.tbFkCampo02.Name = "tbFkCampo02";
+            this.tbFkCampo02.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo02.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +705,8 @@
             this.tpBool.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,6 +754,27 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbMenuSuperior;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox tbFkCampo05;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbFkCampo04;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox tbFkCampo03;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox tbFkCampo02;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox tbFkCampo01;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbFkTabela05;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tbFkTabela04;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbFkTabela03;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbFkTabela02;
+        private System.Windows.Forms.Label text;
+        private System.Windows.Forms.TextBox tbFkTabela01;
     }
 }
 

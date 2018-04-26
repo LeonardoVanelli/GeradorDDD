@@ -57,7 +57,7 @@ namespace Gerador
                     new IEntiRepository().Gerar(entidade);
                     new IEntiService().Gerar(entidade);
                     new ViewModel().Gerar(entidade);
-                    new EntiController().Gerar(entidade);
+                    new EntiController().Gerar(entidade, VerificaForeignKeys());
                     new AdicionaNinject().Gerar(entidade);
                     new AdicionaAutoMapper().Gerar(entidade);
                     if (cbGerarEntidade.Checked)
@@ -67,6 +67,22 @@ namespace Gerador
                 }                
             } else
                 MessageBox.Show("Nome é obrigatório", "Infromação");
+        }
+
+        private IList<ForeignKey> VerificaForeignKeys()
+        {
+            var fks = new List<ForeignKey>();
+            if (tbFkTabela01.Text != "")            
+                fks.Add(new ForeignKey(tbFkTabela01.Text, tbFkCampo01.Text));
+            if (tbFkTabela02.Text != "")
+                fks.Add(new ForeignKey(tbFkTabela02.Text, tbFkCampo02.Text));
+            if (tbFkTabela03.Text != "")
+                fks.Add(new ForeignKey(tbFkTabela03.Text, tbFkCampo03.Text));
+            if (tbFkTabela04.Text != "")
+                fks.Add(new ForeignKey(tbFkTabela04.Text, tbFkCampo04.Text));
+            if (tbFkTabela05.Text != "")
+                fks.Add(new ForeignKey(tbFkTabela05.Text, tbFkCampo05.Text));
+            return fks;
         }
 
         private void AdicionaBotaoMenu()
