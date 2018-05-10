@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Gerador.Geradores
 {
     public class GeradorBase
-    {
+    {        
         protected string GerarArquivo(IList<string> texto)
         {
             var textoFinal = "";

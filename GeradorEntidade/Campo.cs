@@ -1,4 +1,5 @@
-﻿using ProjetoModeloDDD.Domain.Enum;
+﻿using Gerador.Enun;
+using ProjetoModeloDDD.Domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,11 @@ namespace Gerador.GeradorEntidade
         private bool _IsString;
         private bool _IsDateTime;
         private bool _IsDate;
-
+        private bool _IsForeignKey;
         public string Nome { get; set; }
         public string Display { get; set; }
         public bool IsVisivel { get; set; }
+        public VisivelType VisivelTypes { get; set; }
         public bool IsOptional { get; set; }
         public int MaxLength { get; set; }
         public int MinLength { get; set; }
@@ -26,6 +28,7 @@ namespace Gerador.GeradorEntidade
         public string MensagemErro { get; set; }
         public string RegularExpression { get; set; }
         public TipoDataType DataType { get; set; }
+        public ForeignKey ForeignKey { get; set; }
         public bool IsEmail { get; set; }
         public bool IsCpf { get; set; }
         public bool IsVerdadeiro { get; set; }
@@ -44,7 +47,8 @@ namespace Gerador.GeradorEntidade
                     IsBool = false;
                     IsDate = false;
                     IsDateTime = false;
-                    IsString = false;                                        
+                    IsString = false;
+                    IsForeignKey = false;
                 }
                 _IsInt = value;
             }
@@ -63,6 +67,7 @@ namespace Gerador.GeradorEntidade
                     IsDate = false;
                     IsDateTime = false;
                     IsString = false;
+                    IsForeignKey = false;
                 }
                 _IsBool = value;
             }
@@ -81,6 +86,7 @@ namespace Gerador.GeradorEntidade
                     IsDate = false;
                     IsDateTime = false;
                     IsBool = false;
+                    IsForeignKey = false;
                 }
                 _IsString = value;
             }
@@ -99,6 +105,7 @@ namespace Gerador.GeradorEntidade
                     IsDate = false;
                     IsString = false;
                     IsBool = false;
+                    IsForeignKey = false;
                 }
                 _IsDateTime = value;
             }
@@ -117,8 +124,28 @@ namespace Gerador.GeradorEntidade
                     IsDateTime = false;
                     IsString = false;                    
                     IsBool = false;
+                    IsForeignKey = false;
                 }
                 _IsDate = value;
+            }
+        }
+        public bool IsForeignKey
+        {
+            get
+            {
+                return _IsForeignKey;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    IsInt = false;
+                    IsDateTime = false;
+                    IsString = false;
+                    IsBool = false;
+                    IsDate = false;
+                }
+                _IsForeignKey = value;
             }
         }
 
@@ -134,5 +161,5 @@ namespace Gerador.GeradorEntidade
 
             return erros;
         }
-    }       
+    }   
 }

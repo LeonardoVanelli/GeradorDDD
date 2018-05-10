@@ -65,25 +65,7 @@
             this.cbHora = new System.Windows.Forms.CheckBox();
             this.tpBool = new System.Windows.Forms.TabPage();
             this.cbBoolVerdadeiro = new System.Windows.Forms.CheckBox();
-            this.tbNomeEntidade = new System.Windows.Forms.TextBox();
-            this.cbGeral = new System.Windows.Forms.CheckedListBox();
-            this.cbGerarEntidade = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbMenuSuperior = new System.Windows.Forms.CheckBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.text = new System.Windows.Forms.Label();
-            this.tbFkTabela01 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbFkTabela02 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbFkTabela04 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbFkTabela03 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tbFkTabela05 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbFkCampo01 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tbFkCampo05 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -92,14 +74,35 @@
             this.tbFkCampo03 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tbFkCampo02 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbFkCampo01 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbFkTabela05 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbFkTabela04 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbFkTabela03 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbFkTabela02 = new System.Windows.Forms.TextBox();
+            this.text = new System.Windows.Forms.Label();
+            this.tbFkTabela01 = new System.Windows.Forms.TextBox();
+            this.tbNomeEntidade = new System.Windows.Forms.TextBox();
+            this.cbGeral = new System.Windows.Forms.CheckedListBox();
+            this.cbGerarEntidade = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMenuSuperior = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vtsiGerarViews = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpInteger.SuspendLayout();
             this.tpString.SuspendLayout();
             this.tpDateTime.SuspendLayout();
             this.tpBool.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnGerar
@@ -114,7 +117,7 @@
             // 
             // tbNomeCampo
             // 
-            this.tbNomeCampo.Location = new System.Drawing.Point(220, 49);
+            this.tbNomeCampo.Location = new System.Drawing.Point(224, 89);
             this.tbNomeCampo.Name = "tbNomeCampo";
             this.tbNomeCampo.Size = new System.Drawing.Size(137, 20);
             this.tbNomeCampo.TabIndex = 2;
@@ -131,7 +134,7 @@
             // 
             // btnGerarEntidade
             // 
-            this.btnGerarEntidade.Location = new System.Drawing.Point(588, 12);
+            this.btnGerarEntidade.Location = new System.Drawing.Point(601, 43);
             this.btnGerarEntidade.Name = "btnGerarEntidade";
             this.btnGerarEntidade.Size = new System.Drawing.Size(75, 23);
             this.btnGerarEntidade.TabIndex = 7;
@@ -141,7 +144,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Location = new System.Drawing.Point(0, 27);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Campos";
             treeNode1.Text = "Novo Campo";
@@ -149,7 +152,7 @@
             treeNode2.Text = "Tabela";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(214, 424);
+            this.treeView1.Size = new System.Drawing.Size(214, 397);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -179,7 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 33);
+            this.label1.Location = new System.Drawing.Point(221, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 7;
@@ -188,7 +191,7 @@
             // Display
             // 
             this.Display.AutoSize = true;
-            this.Display.Location = new System.Drawing.Point(360, 33);
+            this.Display.Location = new System.Drawing.Point(364, 73);
             this.Display.Name = "Display";
             this.Display.Size = new System.Drawing.Size(41, 13);
             this.Display.TabIndex = 9;
@@ -196,7 +199,7 @@
             // 
             // tbDisplay
             // 
-            this.tbDisplay.Location = new System.Drawing.Point(363, 49);
+            this.tbDisplay.Location = new System.Drawing.Point(367, 89);
             this.tbDisplay.Name = "tbDisplay";
             this.tbDisplay.Size = new System.Drawing.Size(137, 20);
             this.tbDisplay.TabIndex = 3;
@@ -208,10 +211,10 @@
             this.tabControl1.Controls.Add(this.tpDateTime);
             this.tabControl1.Controls.Add(this.tpBool);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(220, 130);
+            this.tabControl1.Location = new System.Drawing.Point(220, 170);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(367, 289);
+            this.tabControl1.Size = new System.Drawing.Size(367, 249);
             this.tabControl1.TabIndex = 6;
             // 
             // tpInteger
@@ -224,7 +227,7 @@
             this.tpInteger.Location = new System.Drawing.Point(4, 22);
             this.tpInteger.Name = "tpInteger";
             this.tpInteger.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInteger.Size = new System.Drawing.Size(359, 263);
+            this.tpInteger.Size = new System.Drawing.Size(359, 223);
             this.tpInteger.TabIndex = 0;
             this.tpInteger.Text = "Integer";
             this.tpInteger.UseVisualStyleBackColor = true;
@@ -435,56 +438,6 @@
             this.cbBoolVerdadeiro.Text = "Verdadeito";
             this.cbBoolVerdadeiro.UseVisualStyleBackColor = true;
             // 
-            // tbNomeEntidade
-            // 
-            this.tbNomeEntidade.Location = new System.Drawing.Point(299, 6);
-            this.tbNomeEntidade.Name = "tbNomeEntidade";
-            this.tbNomeEntidade.Size = new System.Drawing.Size(137, 20);
-            this.tbNomeEntidade.TabIndex = 1;
-            // 
-            // cbGeral
-            // 
-            this.cbGeral.CheckOnClick = true;
-            this.cbGeral.FormattingEnabled = true;
-            this.cbGeral.Items.AddRange(new object[] {
-            "Opcional",
-            "Visivel",
-            "Unico"});
-            this.cbGeral.Location = new System.Drawing.Point(220, 75);
-            this.cbGeral.Name = "cbGeral";
-            this.cbGeral.Size = new System.Drawing.Size(365, 49);
-            this.cbGeral.TabIndex = 4;
-            // 
-            // cbGerarEntidade
-            // 
-            this.cbGerarEntidade.AutoSize = true;
-            this.cbGerarEntidade.Location = new System.Drawing.Point(601, 394);
-            this.cbGerarEntidade.Name = "cbGerarEntidade";
-            this.cbGerarEntidade.Size = new System.Drawing.Size(103, 17);
-            this.cbGerarEntidade.TabIndex = 25;
-            this.cbGerarEntidade.Text = "Gerar Entidade?";
-            this.cbGerarEntidade.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbMenuSuperior);
-            this.groupBox1.Location = new System.Drawing.Point(595, 170);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(204, 99);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Adicionar botão no menu";
-            // 
-            // cbMenuSuperior
-            // 
-            this.cbMenuSuperior.AutoSize = true;
-            this.cbMenuSuperior.Location = new System.Drawing.Point(6, 19);
-            this.cbMenuSuperior.Name = "cbMenuSuperior";
-            this.cbMenuSuperior.Size = new System.Drawing.Size(65, 17);
-            this.cbMenuSuperior.TabIndex = 26;
-            this.cbMenuSuperior.Text = "Superior";
-            this.cbMenuSuperior.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.label15);
@@ -513,102 +466,6 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Tabela (Temporario)";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // text
-            // 
-            this.text.AutoSize = true;
-            this.text.Location = new System.Drawing.Point(11, 18);
-            this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(71, 13);
-            this.text.TabIndex = 9;
-            this.text.Text = "Nome Tabela";
-            // 
-            // tbFkTabela01
-            // 
-            this.tbFkTabela01.Location = new System.Drawing.Point(14, 34);
-            this.tbFkTabela01.Name = "tbFkTabela01";
-            this.tbFkTabela01.Size = new System.Drawing.Size(137, 20);
-            this.tbFkTabela01.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 59);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Nome Tabela";
-            // 
-            // tbFkTabela02
-            // 
-            this.tbFkTabela02.Location = new System.Drawing.Point(14, 75);
-            this.tbFkTabela02.Name = "tbFkTabela02";
-            this.tbFkTabela02.Size = new System.Drawing.Size(137, 20);
-            this.tbFkTabela02.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 143);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 13);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Nome Tabela";
-            // 
-            // tbFkTabela04
-            // 
-            this.tbFkTabela04.Location = new System.Drawing.Point(14, 159);
-            this.tbFkTabela04.Name = "tbFkTabela04";
-            this.tbFkTabela04.Size = new System.Drawing.Size(137, 20);
-            this.tbFkTabela04.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 102);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Nome Tabela";
-            // 
-            // tbFkTabela03
-            // 
-            this.tbFkTabela03.Location = new System.Drawing.Point(14, 118);
-            this.tbFkTabela03.Name = "tbFkTabela03";
-            this.tbFkTabela03.Size = new System.Drawing.Size(137, 20);
-            this.tbFkTabela03.TabIndex = 12;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 187);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 13);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "Nome Tabela";
-            // 
-            // tbFkTabela05
-            // 
-            this.tbFkTabela05.Location = new System.Drawing.Point(14, 203);
-            this.tbFkTabela05.Name = "tbFkTabela05";
-            this.tbFkTabela05.Size = new System.Drawing.Size(137, 20);
-            this.tbFkTabela05.TabIndex = 16;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(176, 18);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 13);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Nome Campo view";
-            // 
-            // tbFkCampo01
-            // 
-            this.tbFkCampo01.Location = new System.Drawing.Point(179, 34);
-            this.tbFkCampo01.Name = "tbFkCampo01";
-            this.tbFkCampo01.Size = new System.Drawing.Size(137, 20);
-            this.tbFkCampo01.TabIndex = 18;
             // 
             // label15
             // 
@@ -674,11 +531,183 @@
             this.tbFkCampo02.Size = new System.Drawing.Size(137, 20);
             this.tbFkCampo02.TabIndex = 20;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(176, 18);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 13);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Nome Campo view";
+            // 
+            // tbFkCampo01
+            // 
+            this.tbFkCampo01.Location = new System.Drawing.Point(179, 34);
+            this.tbFkCampo01.Name = "tbFkCampo01";
+            this.tbFkCampo01.Size = new System.Drawing.Size(137, 20);
+            this.tbFkCampo01.TabIndex = 18;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 187);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "Nome Tabela";
+            // 
+            // tbFkTabela05
+            // 
+            this.tbFkTabela05.Location = new System.Drawing.Point(14, 203);
+            this.tbFkTabela05.Name = "tbFkTabela05";
+            this.tbFkTabela05.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela05.TabIndex = 16;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(11, 143);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Nome Tabela";
+            // 
+            // tbFkTabela04
+            // 
+            this.tbFkTabela04.Location = new System.Drawing.Point(14, 159);
+            this.tbFkTabela04.Name = "tbFkTabela04";
+            this.tbFkTabela04.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela04.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(11, 102);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Nome Tabela";
+            // 
+            // tbFkTabela03
+            // 
+            this.tbFkTabela03.Location = new System.Drawing.Point(14, 118);
+            this.tbFkTabela03.Name = "tbFkTabela03";
+            this.tbFkTabela03.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela03.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(11, 59);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Nome Tabela";
+            // 
+            // tbFkTabela02
+            // 
+            this.tbFkTabela02.Location = new System.Drawing.Point(14, 75);
+            this.tbFkTabela02.Name = "tbFkTabela02";
+            this.tbFkTabela02.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela02.TabIndex = 10;
+            // 
+            // text
+            // 
+            this.text.AutoSize = true;
+            this.text.Location = new System.Drawing.Point(11, 18);
+            this.text.Name = "text";
+            this.text.Size = new System.Drawing.Size(71, 13);
+            this.text.TabIndex = 9;
+            this.text.Text = "Nome Tabela";
+            // 
+            // tbFkTabela01
+            // 
+            this.tbFkTabela01.Location = new System.Drawing.Point(14, 34);
+            this.tbFkTabela01.Name = "tbFkTabela01";
+            this.tbFkTabela01.Size = new System.Drawing.Size(137, 20);
+            this.tbFkTabela01.TabIndex = 8;
+            // 
+            // tbNomeEntidade
+            // 
+            this.tbNomeEntidade.Location = new System.Drawing.Point(303, 46);
+            this.tbNomeEntidade.Name = "tbNomeEntidade";
+            this.tbNomeEntidade.Size = new System.Drawing.Size(137, 20);
+            this.tbNomeEntidade.TabIndex = 1;
+            // 
+            // cbGeral
+            // 
+            this.cbGeral.CheckOnClick = true;
+            this.cbGeral.FormattingEnabled = true;
+            this.cbGeral.Items.AddRange(new object[] {
+            "Opcional",
+            "Visivel",
+            "Unico"});
+            this.cbGeral.Location = new System.Drawing.Point(220, 115);
+            this.cbGeral.Name = "cbGeral";
+            this.cbGeral.Size = new System.Drawing.Size(365, 49);
+            this.cbGeral.TabIndex = 4;
+            // 
+            // cbGerarEntidade
+            // 
+            this.cbGerarEntidade.AutoSize = true;
+            this.cbGerarEntidade.Location = new System.Drawing.Point(601, 394);
+            this.cbGerarEntidade.Name = "cbGerarEntidade";
+            this.cbGerarEntidade.Size = new System.Drawing.Size(103, 17);
+            this.cbGerarEntidade.TabIndex = 25;
+            this.cbGerarEntidade.Text = "Gerar Entidade?";
+            this.cbGerarEntidade.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbMenuSuperior);
+            this.groupBox1.Location = new System.Drawing.Point(595, 170);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(204, 99);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Adicionar botão no menu";
+            // 
+            // cbMenuSuperior
+            // 
+            this.cbMenuSuperior.AutoSize = true;
+            this.cbMenuSuperior.Location = new System.Drawing.Point(6, 19);
+            this.cbMenuSuperior.Name = "cbMenuSuperior";
+            this.cbMenuSuperior.Size = new System.Drawing.Size(65, 17);
+            this.cbMenuSuperior.TabIndex = 26;
+            this.cbMenuSuperior.Text = "Superior";
+            this.cbMenuSuperior.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
+            this.menuStrip1.TabIndex = 27;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vtsiGerarViews});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
+            this.toolStripMenuItem1.Text = "Gerar";
+            // 
+            // vtsiGerarViews
+            // 
+            this.vtsiGerarViews.Name = "vtsiGerarViews";
+            this.vtsiGerarViews.Size = new System.Drawing.Size(180, 22);
+            this.vtsiGerarViews.Text = "Views";
+            this.vtsiGerarViews.Click += new System.EventHandler(this.vtsiGerarViews_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 460);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbGerarEntidade);
             this.Controls.Add(this.cbGeral);
@@ -691,6 +720,7 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnGerarEntidade);
             this.Controls.Add(this.tbNomeCampo);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = " ";
             this.panel1.ResumeLayout(false);
@@ -703,10 +733,12 @@
             this.tpDateTime.PerformLayout();
             this.tpBool.ResumeLayout(false);
             this.tpBool.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,7 +785,6 @@
         private System.Windows.Forms.CheckBox cbGerarEntidade;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbMenuSuperior;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox tbFkCampo05;
@@ -775,6 +806,9 @@
         private System.Windows.Forms.TextBox tbFkTabela02;
         private System.Windows.Forms.Label text;
         private System.Windows.Forms.TextBox tbFkTabela01;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vtsiGerarViews;
     }
 }
 

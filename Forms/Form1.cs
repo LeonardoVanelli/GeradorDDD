@@ -1,4 +1,5 @@
 ﻿using Gerador.CarregarDados;
+using Gerador.Forms;
 using Gerador.GeradorEntidade;
 using Gerador.Geradores;
 using Gerador.Geradores.Config;
@@ -34,7 +35,8 @@ namespace Gerador
         {
             InitializeComponent();
             ValueCampoEdidanto = -1;
-            cbGeral.SetItemChecked(1, true);            
+            cbGeral.SetItemChecked(1, true);
+            new MontaArquivo().BuscaAtributos();
         }
 
 
@@ -94,7 +96,7 @@ namespace Gerador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Atributos().BuscaAtributos();
+            new MontaArquivo().BuscaAtributos();
         }
 
         private void btnGerarEntidade_Click(object sender, EventArgs e)
@@ -306,6 +308,16 @@ namespace Gerador
         private void TbMaxLength_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void gerarViewsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vtsiGerarViews_Click(object sender, EventArgs e)
+        {
+            new FormGerarView().ShowDialog(this);
         }
     }
 }

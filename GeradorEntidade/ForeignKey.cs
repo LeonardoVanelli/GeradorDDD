@@ -12,6 +12,11 @@ namespace Gerador.GeradorEntidade
         public string CampoView { get; set; }
 
 
+        public ForeignKey()
+        {
+
+        }
+
         public ForeignKey(string tabela, string campoView)
         {
             this.Tabela = tabela;
