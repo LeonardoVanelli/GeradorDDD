@@ -8,6 +8,10 @@ namespace Gerador.Geradores.Services
 {
     class EntiService : GeradorBase
     {
+        public EntiService(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(string entidade)
         {
             IList<string> classe = new List<String>();

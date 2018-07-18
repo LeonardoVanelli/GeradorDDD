@@ -11,6 +11,10 @@ namespace Gerador.Geradores.View
     {
         IList<string> classe = new List<string>();
 
+        public Edit(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(Tabela tabela)
         {
             classe.Add("@model ProjetoModeloDDD.MVC.ViewModels."+tabela.Nome+"ViewModel");

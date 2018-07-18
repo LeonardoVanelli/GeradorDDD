@@ -11,9 +11,16 @@ namespace Gerador.CarregarDados
 {
     class MontaArquivo
     {
+        public string Caminho { get; set; }
+
+        public MontaArquivo(string caminho)
+        {
+            Caminho = caminho;
+        }
+
         public void BuscaAtributos()
         {
-            var ver = System.IO.Directory.GetFiles(@"C:\Prisma\WEB\PrismaWEB.MVC\ViewModels");
+            var ver = System.IO.Directory.GetFiles(Caminho+@"\PrismaWEB.MVC\ViewModels");
             //For dos arquivos .cs     
             IList<Tabela> tabelas = new List<Tabela>();
             foreach (var item in ver)

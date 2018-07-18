@@ -9,6 +9,10 @@ namespace Gerador.Geradores
 {
     class AdicionaAutoMapper : GeradorBase
     {
+        public AdicionaAutoMapper(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(string entidade)
         {
             var arquivo1 = BuscaArquivo("ViewModelToDomainMappingProfile.cs");
@@ -57,7 +61,7 @@ namespace Gerador.Geradores
 
         private IList<string> BuscaArquivo(string nome)
         {            
-            string sourcePath = @"C:\Prisma\WEB\PrismaWEB.MVC\AutoMapper\" + nome;
+            string sourcePath = Caminho + @"\PrismaWEB.MVC\AutoMapper\" + nome;
 
             return System.IO.File.ReadAllLines(sourcePath).ToList();
         }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Novo Campo");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Tabela", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Novo Campo");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Tabela", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
             this.BtnGerar = new System.Windows.Forms.Button();
             this.tbNomeCampo = new System.Windows.Forms.TextBox();
             this.fbdCaminhoSalvar = new System.Windows.Forms.FolderBrowserDialog();
@@ -94,6 +94,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vtsiGerarViews = new System.Windows.Forms.ToolStripMenuItem();
+            this.LocalizaPasta = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpInteger.SuspendLayout();
@@ -146,12 +147,12 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(0, 27);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Campos";
-            treeNode1.Text = "Novo Campo";
-            treeNode2.Name = "nTabela";
-            treeNode2.Text = "Tabela";
+            treeNode3.Name = "Campos";
+            treeNode3.Text = "Novo Campo";
+            treeNode4.Name = "nTabela";
+            treeNode4.Text = "Tabela";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(214, 397);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -282,7 +283,7 @@
             this.tpString.Location = new System.Drawing.Point(4, 22);
             this.tpString.Name = "tpString";
             this.tpString.Padding = new System.Windows.Forms.Padding(3);
-            this.tpString.Size = new System.Drawing.Size(359, 263);
+            this.tpString.Size = new System.Drawing.Size(359, 223);
             this.tpString.TabIndex = 2;
             this.tpString.Text = "String";
             this.tpString.UseVisualStyleBackColor = true;
@@ -403,7 +404,7 @@
             this.tpDateTime.Location = new System.Drawing.Point(4, 22);
             this.tpDateTime.Name = "tpDateTime";
             this.tpDateTime.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDateTime.Size = new System.Drawing.Size(359, 263);
+            this.tpDateTime.Size = new System.Drawing.Size(359, 223);
             this.tpDateTime.TabIndex = 1;
             this.tpDateTime.Text = "DateTime";
             this.tpDateTime.UseVisualStyleBackColor = true;
@@ -423,7 +424,7 @@
             this.tpBool.Controls.Add(this.cbBoolVerdadeiro);
             this.tpBool.Location = new System.Drawing.Point(4, 22);
             this.tpBool.Name = "tpBool";
-            this.tpBool.Size = new System.Drawing.Size(359, 263);
+            this.tpBool.Size = new System.Drawing.Size(359, 223);
             this.tpBool.TabIndex = 3;
             this.tpBool.Text = "Bool";
             this.tpBool.UseVisualStyleBackColor = true;
@@ -462,7 +463,7 @@
             this.tabPage1.Controls.Add(this.tbFkTabela01);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(359, 263);
+            this.tabPage1.Size = new System.Drawing.Size(359, 223);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Tabela (Temporario)";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -698,7 +699,7 @@
             // vtsiGerarViews
             // 
             this.vtsiGerarViews.Name = "vtsiGerarViews";
-            this.vtsiGerarViews.Size = new System.Drawing.Size(180, 22);
+            this.vtsiGerarViews.Size = new System.Drawing.Size(104, 22);
             this.vtsiGerarViews.Text = "Views";
             this.vtsiGerarViews.Click += new System.EventHandler(this.vtsiGerarViews_Click);
             // 
@@ -809,6 +810,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vtsiGerarViews;
+        private System.Windows.Forms.FolderBrowserDialog LocalizaPasta;
     }
 }
 

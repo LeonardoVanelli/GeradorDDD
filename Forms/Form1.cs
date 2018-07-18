@@ -10,33 +10,31 @@ using Gerador.Uteis;
 using ProjetoModeloDDD.Domain.Enum;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gerador
 {
     public partial class Form1 : Form
     {
-        public string Caminho { get; set; }
         public object Campos { get; private set; }
         IList<Campo> campos = new List<Campo>();        
         private int ValueCampoEdidanto { get; set; }
         Tabela TabelaCompleta = new Tabela();
+        public string Caminho { get; set; }
 
         public Form1()
         {
             InitializeComponent();
             ValueCampoEdidanto = -1;
             cbGeral.SetItemChecked(1, true);
-            new MontaArquivo().BuscaAtributos();
+
+            if (LocalizaPasta.ShowDialog() == DialogResult.OK)
+            {
+                Caminho = LocalizaPasta.SelectedPath;
+            }
+            new MontaArquivo(Caminho).BuscaAtributos();
+
         }
 
 
@@ -51,19 +49,19 @@ namespace Gerador
                     MessageBoxIcon.Question,
                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    new EntiAppService().Gerar(entidade);
-                    new EntiConfiguration().Gerar(entidade);
-                    new EntiRepository().Gerar(entidade);
-                    new EntiService().Gerar(entidade);
-                    new IEntiAppService().Gerar(entidade);
-                    new IEntiRepository().Gerar(entidade);
-                    new IEntiService().Gerar(entidade);
-                    new ViewModel().Gerar(entidade);
-                    new EntiController().Gerar(entidade, VerificaForeignKeys());
-                    new AdicionaNinject().Gerar(entidade);
-                    new AdicionaAutoMapper().Gerar(entidade);
+                    new EntiAppService(Caminho).Gerar(entidade);
+                    new EntiConfiguration(Caminho).Gerar(entidade);
+                    new EntiRepository(Caminho).Gerar(entidade);
+                    new EntiService(Caminho).Gerar(entidade);
+                    new IEntiAppService(Caminho).Gerar(entidade);
+                    new IEntiRepository(Caminho).Gerar(entidade);
+                    new IEntiService(Caminho).Gerar(entidade);
+                    new ViewModel(Caminho).Gerar(entidade);
+                    new EntiController(Caminho).Gerar(entidade, VerificaForeignKeys());
+                    new AdicionaNinject(Caminho).Gerar(entidade);
+                    new AdicionaAutoMapper(Caminho).Gerar(entidade);
                     if (cbGerarEntidade.Checked)
-                        new EntidadesEmAtributos().CarregaAtributo(TabelaCompleta, entidade);
+                        new EntidadesEmAtributos(Caminho).CarregaAtributo(TabelaCompleta, entidade);
                     MessageBox.Show("Gerado com Sucesso", "Infromação");
                     AdicionaBotaoMenu();
                 }                
@@ -89,14 +87,15 @@ namespace Gerador
 
         private void AdicionaBotaoMenu()
         {
-            var entidade = tbNomeEntidade.Text;
-            if (cbMenuSuperior.Checked)
-                new AdicionaBotaoEmMenu().Superior(entidade);
+            //Não sera preciso adicionar botões
+            //var entidade = tbNomeEntidade.Text;
+            //if (cbMenuSuperior.Checked)
+                //new AdicionaBotaoEmMenu().Superior(entidade);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new MontaArquivo().BuscaAtributos();
+            new MontaArquivo(Caminho).BuscaAtributos();
         }
 
         private void btnGerarEntidade_Click(object sender, EventArgs e)
@@ -317,7 +316,12 @@ namespace Gerador
 
         private void vtsiGerarViews_Click(object sender, EventArgs e)
         {
-            new FormGerarView().ShowDialog(this);
+            new FormGerarView(Caminho).ShowDialog(this);
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 }

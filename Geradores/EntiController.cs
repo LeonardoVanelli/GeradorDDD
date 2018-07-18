@@ -11,6 +11,10 @@ namespace Gerador.Geradores
     {
         IList<string> classe = new List<String>();
 
+        public EntiController(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(string entidade, IList<ForeignKey> TabelasForeignKeys)
         {
             var EMinusculo = entidade.ToLower();

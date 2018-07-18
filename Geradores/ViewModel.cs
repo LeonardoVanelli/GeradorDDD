@@ -8,6 +8,10 @@ namespace Gerador.Geradores
 {
     class ViewModel : GeradorBase
     {
+        public ViewModel(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(string entidade)
         {
             IList<string> classe = new List<String>();

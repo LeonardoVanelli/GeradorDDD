@@ -16,8 +16,11 @@ namespace Gerador.Forms
 {
     public partial class FormGerarView : Form
     {
-        public FormGerarView()
+        public string Caminho { get; set; }
+
+        public FormGerarView(string caminho)
         {
+            Caminho = caminho;
             InitializeComponent();
             var ListaNomeEntidades = BuscaNomeEntidades();
             MontaTreeView(ListaNomeEntidades);
@@ -34,7 +37,7 @@ namespace Gerador.Forms
 
         private IList<string> BuscaNomeEntidades()
         {
-            var files = Directory.GetFiles(@"C:\Prisma\WEB\PrismaWEB.MVC\ViewModels");
+            var files = Directory.GetFiles(Caminho + @"\PrismaWEB.MVC\ViewModels");
             var result = new List<string>();
 
             foreach (var file in files)
@@ -52,8 +55,8 @@ namespace Gerador.Forms
             {
                 if (NomeEntidadeSelecionada == "Entidades")                
                     throw new Exception("Selecione um Item para gerar a view");
-                StreamReader entidade = new StreamReader(@"C:\Prisma\WEB\PrismaWEB.MVC\ViewModels\"+ NomeEntidadeSelecionada + "ViewModel.cs");
-                return new MontaArquivo().MontaArquivoComStreamReader(entidade);                                
+                StreamReader entidade = new StreamReader(Caminho + @"\PrismaWEB.MVC\ViewModels\"+ NomeEntidadeSelecionada + "ViewModel.cs");
+                return new MontaArquivo(Caminho).MontaArquivoComStreamReader(entidade);                                
             }
             catch (Exception exp)
             {
@@ -66,14 +69,14 @@ namespace Gerador.Forms
         {
             var tabela = GerarTabela();
             if (tabela != null)
-                new Create().Gerar(tabela);
+                new Create(Caminho).Gerar(tabela);
         }
 
         private void btnGerarIndex_Click(object sender, EventArgs e)
         {
             var tabela = GerarTabela();
             if (tabela != null)
-                new Index().Gerar(tabela);
+                new Index(Caminho).Gerar(tabela);
         }
 
         private void btnGerarEdit_Click(object sender, EventArgs e)
@@ -81,7 +84,7 @@ namespace Gerador.Forms
             var tabela = GerarTabela();
             if (tabela != null)
             {
-                new Edit().Gerar(tabela);
+                new Edit(Caminho).Gerar(tabela);
             }
         }
 
@@ -90,9 +93,9 @@ namespace Gerador.Forms
             var tabela = GerarTabela();
             if (tabela != null)
             {
-                new Index().Gerar(tabela);
-                new Edit().Gerar(tabela);                
-                new Create().Gerar(tabela);
+                new Index(Caminho).Gerar(tabela);
+                new Edit(Caminho).Gerar(tabela);                
+                new Create(Caminho).Gerar(tabela);
             }
         }
 

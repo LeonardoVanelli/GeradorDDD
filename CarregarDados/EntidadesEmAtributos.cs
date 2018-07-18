@@ -11,6 +11,11 @@ namespace Gerador.CarregarDados
     class EntidadesEmAtributos : GeradorBase
     {
         IList<string> classe;
+
+        public EntidadesEmAtributos(string caminho) : base(caminho)
+        {
+        }
+
         public void CarregaAtributo(Tabela tabela, string NomeTabela)
         {
             classe = new List<String>();

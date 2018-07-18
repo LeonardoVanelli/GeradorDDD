@@ -29,10 +29,10 @@ namespace Gerador.Uteis
 
         protected void SalvarArquivo(string textoFinal, string nomeArquivo, string caminhoArquivo)
         {
-            StreamWriter salvar;
-            salvar = new StreamWriter($@"C:\Prisma\WEB\{caminhoArquivo}\{nomeArquivo}");
-            salvar.WriteLine(textoFinal);
-            salvar.Close();
+            //StreamWriter salvar;
+            //salvar = new StreamWriter($@"C:\Prisma\WEB\{caminhoArquivo}\{nomeArquivo}");
+            //salvar.WriteLine(textoFinal);
+            //salvar.Close();
         }
     }
 }

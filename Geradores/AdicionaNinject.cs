@@ -9,6 +9,10 @@ namespace Gerador.Geradores
 {
     class AdicionaNinject : GeradorBase
     {
+        public AdicionaNinject(string caminho) : base(caminho)
+        {
+        }
+
         public void Gerar(string entidade)
         {
             var arquivo = BuscaArquivo();
@@ -48,7 +52,7 @@ namespace Gerador.Geradores
         private IList<string> BuscaArquivo()
         {
             string fileName = "NinjectWebCommon.cs";
-            string sourcePath = @"C:\Prisma\WEB\PrismaWEB.MVC\App_Start\" + fileName;
+            string sourcePath = Caminho + @"\PrismaWEB.MVC\App_Start\" + fileName;
 
             return System.IO.File.ReadAllLines(sourcePath).ToList();
         }
